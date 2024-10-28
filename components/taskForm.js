@@ -1,6 +1,10 @@
 // components/TaskForm.js
 import { useState } from 'react';
 import RecurrenceOptions from './RecurrenceOptions';
+// pages/index.js
+import TaskForm from '../components/TaskForm'; // Ensure this path is correct
+import TaskList from '../components/TaskList';
+
 
 export default function TaskForm({ onAddTask }) {
   const [title, setTitle] = useState('');
