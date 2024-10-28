@@ -1,13 +1,22 @@
 // pages/index.js
 // pages/index.js
+// pages/index.js
+import { useState } from 'react';
 import TaskForm from '../components/TaskForm';
+import TaskList from '../components/TaskList';
 
 export default function Home() {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">To-Do List</h1>
-      <TaskForm />
-      {/* Add Task List Display Here */}
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">To-Do List App</h1>
+      <TaskForm onAddTask={addTask} />
+      <TaskList tasks={tasks} />
     </div>
   );
 }
