@@ -2,4 +2,3 @@
 react todo list
 This is a simple To do list 
 
- http://localhost:3000 link
